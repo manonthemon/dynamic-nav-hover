@@ -7,6 +7,17 @@ this.classList.add('trigger-enter')
 setTimeout(() => this.classList.add('trigger-enter-active'), 150)
 background.classList.add('open')
 
+const dropdown = this.querySelector('.dropdown')
+
+const dropdownCords = dropdown.getBoundingClientRect() //Get coordinates of the dropdown
+const navCords = nav.getBoundingClientRect()
+
+const cords = {
+    height: dropdownCords.height,
+    width: dropdownCords.width
+}
+
+
 }
 
 function handleLeave() {

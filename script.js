@@ -14,11 +14,16 @@ const navCords = nav.getBoundingClientRect() //Gets coordinates of nav in case i
 
 const cords = {
     height: dropdownCords.height,
-    width: dropdownCords.width
+    width: dropdownCords.width,
+    top: dropdownCords.top - navCords.top,
+    left: dropdownCords.left - navCords.left,
+
 }
 
-background.style.setProperty('width', `${cords.width}px`);
+background.style.setProperty('width', `${cords.width}px`); //Defines width and height of background of hovered over dropdown
 background.style.setProperty('height', `${cords.height}px`);
+background.style.setProperty('transform', `translate(${cords.left}px, ${cords.top}px )`); // Defines position of the hovered over dropdown
+
 
 }
 
